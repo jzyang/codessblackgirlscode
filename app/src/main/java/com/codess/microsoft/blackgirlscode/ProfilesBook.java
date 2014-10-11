@@ -23,34 +23,34 @@ public class ProfilesBook
 
   public static ProfilesBook get(Context context)
   {
-    if (sEventsBook == null)
+    if (sProfilesBook == null)
     {
-      sEventsBook = new ProfilesBook(context.getApplicationContext());
+      sProfilesBook = new ProfilesBook(context.getApplicationContext());
     }
 
-    return sEventsBook;
+    return sProfilesBook;
   }
 
-  public ArrayList<Event> getCrimes()
+  public ArrayList<Profile> getCrimes()
   {
-    return mEvents;
+    return mProfiles;
   }
 
-  public Event getCrime(UUID id)
+  public Profile getCrime(UUID id)
   {
-    for (Event event : mEvents)
+    for (Profile profile : mProfiles)
     {
-      if (event.getId().equals(id))
+      if (profile.getId().equals(id))
       {
-        return event;
+        return profile;
       }
     }
 
     return null;
   }
 
-  public void addEvent(Event event)
+  public void addProfile(Profile profile)
   {
-    mEvents.add(event);
+    mProfiles.add(profile);
   }
 }
