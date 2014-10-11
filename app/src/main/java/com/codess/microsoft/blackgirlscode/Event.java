@@ -1,5 +1,6 @@
 package com.codess.microsoft.blackgirlscode;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -7,55 +8,63 @@ import java.util.UUID;
  */
 public class Event
 {
-  private String eventDate;
-  private String eventTitle;
-  private String eventDetails;
-  private UUID mUUID;
+    private Date eventDate;
+    private String eventLocation;
+    private String eventTitle;
+    private String eventDetails;
+    private UUID mUUID;
 
-  private final int shortLength = 100;
+    private final int shortLength = 100;
 
-  public Event(UUID uuid, String date, String title, String details)
-  {
+    public Event(UUID uuid, String date, String title, String details)
+    {
 
-  }
+    }
 
-  public String getEventDate()
-  {
-    return eventDate;
-  }
+    public Date getEventDate()
+    {
+        return eventDate;
+    }
 
-  public void setEventDate(String eventDate)
-  {
-    this.eventDate = eventDate;
-  }
+    public void setEventDate(Date eventDate)
+    {
+        this.eventDate = eventDate;
+    }
 
-  public String getEventTitle()
-  {
-    return eventTitle;
-  }
+    public String getEventLocation()
+    {
+        return eventLocation;
+    }
 
-  public void setEventTitle(String eventTitle)
-  {
-    this.eventTitle = eventTitle;
-  }
+    public void setEventLocation(String eventLocation)
+    {
+        this.eventLocation = eventLocation;
+    }
 
-  public String getEventDetails()
-  {
-    return eventDetails;
-  }
+    public String getEventTitle()
+    {
+        return eventTitle;
+    }
 
-  public UUID getId()
-  {
-    return mUUID;
-  }
+    public void setEventTitle(String eventTitle)
+    {
+        this.eventTitle = eventTitle;
+    }
 
-  public void setEventDetails(String eventDetails)
-  {
-    this.eventDetails = eventDetails;
-  }
+    public String getEventDetails() { return eventDetails; }
 
-  public String getShortEVentDetails()
-  {
-    return eventDetails.subSequence(0, shortLength).toString();
-  }
+    public void setEventDetails(String eventDetails)
+    {
+        this.eventDetails = eventDetails;
+    }
+
+    public UUID getId()
+    {
+        return mUUID;
+    }
+
+    public String getShortEVentDetails()
+    {
+        return eventDetails.subSequence(0, shortLength).toString();
+    }
 }
