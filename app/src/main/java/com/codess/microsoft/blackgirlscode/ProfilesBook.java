@@ -13,12 +13,19 @@ public class ProfilesBook
   private static ProfilesBook sProfilesBook;
   private Context mAppContext;
 
-  private ArrayList<Profile> mProfiles;
+  private ArrayList<Person> mPersons;
 
   private ProfilesBook(Context appContext)
   {
     mAppContext = appContext;
-    mProfiles = new ArrayList<Profile>();
+    mPersons = new ArrayList<Person>();
+
+    for(int i = 0; i < 100; i++)
+    {
+      Person person = new Person();
+      person.setName("Jane #" + i);
+      mPersons.add(person);
+    }
   }
 
   public static ProfilesBook get(Context context)
@@ -31,26 +38,26 @@ public class ProfilesBook
     return sProfilesBook;
   }
 
-  public ArrayList<Profile> getCrimes()
+  public ArrayList<Person> getCrimes()
   {
-    return mProfiles;
+    return mPersons;
   }
 
-  public Profile getCrime(UUID id)
+  public Person getCrime(UUID id)
   {
-    for (Profile profile : mProfiles)
+    for (Person person : mPersons)
     {
-      if (profile.getId().equals(id))
+      if (person.getId().equals(id))
       {
-        return profile;
+        return person;
       }
     }
 
     return null;
   }
 
-  public void addProfile(Profile profile)
+  public void addProfile(Person person)
   {
-    mProfiles.add(profile);
+    mPersons.add(person);
   }
 }

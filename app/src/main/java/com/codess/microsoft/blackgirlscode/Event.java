@@ -1,5 +1,6 @@
 package com.codess.microsoft.blackgirlscode;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -7,39 +8,41 @@ import java.util.UUID;
  */
 public class Event
 {
-  private String eventDate;
+  private Date eventDate;
   private String eventTitle;
   private String eventDetails;
   private UUID mUUID;
 
   private final int shortLength = 100;
 
-  public Event(UUID uuid, String date, String title, String details)
+  public Event()
   {
-
+    mUUID = UUID.randomUUID();
+    eventTitle = "New Profile";
+    eventDetails = "Come to our event";
   }
 
-  public String getEventDate()
+  public Date getEventDate()
   {
     return eventDate;
   }
 
-  public void setEventDate(String eventDate)
+  public void setEventDate(Date eventDate)
   {
     this.eventDate = eventDate;
   }
 
-  public String getEventTitle()
+  public String getTitle()
   {
     return eventTitle;
   }
 
-  public void setEventTitle(String eventTitle)
+  public void setTitle(String eventTitle)
   {
     this.eventTitle = eventTitle;
   }
 
-  public String getEventDetails()
+  public String getDetails()
   {
     return eventDetails;
   }
@@ -49,12 +52,12 @@ public class Event
     return mUUID;
   }
 
-  public void setEventDetails(String eventDetails)
+  public void setDetails(String eventDetails)
   {
     this.eventDetails = eventDetails;
   }
 
-  public String getShortEVentDetails()
+  public String getShortEventDetails()
   {
     return eventDetails.subSequence(0, shortLength).toString();
   }

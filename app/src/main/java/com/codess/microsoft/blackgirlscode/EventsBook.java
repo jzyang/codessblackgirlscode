@@ -3,6 +3,7 @@ package com.codess.microsoft.blackgirlscode;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -19,6 +20,14 @@ public class EventsBook
   {
     mAppContext = appContext;
     mEvents = new ArrayList<Event>();
+
+    for(int i = 0; i < 100; i++)
+    {
+      Event event = new Event();
+      event.setTitle("Event " + i);
+      event.setEventDate(new Date());
+      mEvents.add(event);
+    }
   }
 
   public static EventsBook get(Context context)
