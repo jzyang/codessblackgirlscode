@@ -8,8 +8,12 @@
     <string name="event_title">Event Title</string>
     <string name="event_date">Event Date</string>
 
+    <string name="profile_name">Name</string>
+    <string name="profile_status">Status</string>
+
     <string name="event_title_label">Title</string>
     <string name="event_details_label">Details</string>
+
     <string name="events_title">Events</string>
 
     <string name="action_settings">Menu</string>

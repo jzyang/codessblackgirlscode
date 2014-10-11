@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Julia on 10/11/14.
@@ -29,7 +30,7 @@ public class EventListFragment extends ListFragment
     super.onCreate(savedInstanceState);
     getActivity().setTitle(R.string.events_title);
 
-    mEvents = EventsBook.get(getActivity()).getCrimes();
+    mEvents = EventsBook.get(getActivity()).getEvents();
 
     EventAdapter adapter = new EventAdapter(mEvents);
     setListAdapter(adapter);
@@ -47,7 +48,7 @@ public class EventListFragment extends ListFragment
     startActivity(intent);
   }
 
-  public ArrayList<Event> getCrimes()
+  public List<Event> getEvents()
   {
     return mEvents;
   }

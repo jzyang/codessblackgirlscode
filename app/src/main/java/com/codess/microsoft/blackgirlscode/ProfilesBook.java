@@ -3,6 +3,7 @@ package com.codess.microsoft.blackgirlscode;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -14,18 +15,13 @@ public class ProfilesBook
   private Context mAppContext;
 
   private ArrayList<Person> mPersons;
+  private Map<UUID, Person> mPeopleMap;
 
   private ProfilesBook(Context appContext)
   {
     mAppContext = appContext;
-    mPersons = new ArrayList<Person>();
-
-    for(int i = 0; i < 100; i++)
-    {
-      Person person = new Person();
-      person.setName("Jane #" + i);
-      mPersons.add(person);
-    }
+    mPersons = DataGenerator.createPeopleList();
+    mPeopleMap = DataGenerator.makePeople();
   }
 
   public static ProfilesBook get(Context context)
@@ -38,22 +34,14 @@ public class ProfilesBook
     return sProfilesBook;
   }
 
-  public ArrayList<Person> getCrimes()
+  public ArrayList<Person> getProfiles()
   {
     return mPersons;
   }
 
-  public Person getCrime(UUID id)
+  public Person getProfile(UUID id)
   {
-    for (Person person : mPersons)
-    {
-      if (person.getId().equals(id))
-      {
-        return person;
-      }
-    }
-
-    return null;
+    return mPeopleMap.get(id);
   }
 
   public void addProfile(Person person)

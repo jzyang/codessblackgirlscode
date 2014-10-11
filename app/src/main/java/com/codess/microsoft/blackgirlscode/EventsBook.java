@@ -40,12 +40,12 @@ public class EventsBook
     return sEventsBook;
   }
 
-  public ArrayList<Event> getCrimes()
+  public ArrayList<Event> getEvents()
   {
     return mEvents;
   }
 
-  public Event getCrime(UUID id)
+  public Event getEvent(UUID id)
   {
     for (Event event : mEvents)
     {

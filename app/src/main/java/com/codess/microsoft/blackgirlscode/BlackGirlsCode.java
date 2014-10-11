@@ -7,6 +7,6 @@ public class BlackGirlsCode extends CodessFragmentActivity
   @Override
   protected Fragment createFragment()
   {
-    return new EventListFragment();
+    return new ProfileListFragment();
   }
 }

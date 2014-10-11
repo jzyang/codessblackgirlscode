@@ -39,7 +39,7 @@ public class EventFragment extends Fragment
     UUID eventId = (UUID)getArguments().
         getSerializable(EXTRA_EVENT_ID);
 
-    mEvent = EventsBook.get(getActivity()).getCrime(eventId);
+    mEvent = EventsBook.get(getActivity()).getEvent(eventId);
   }
 
   @Override

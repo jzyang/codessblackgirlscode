@@ -3,7 +3,8 @@ package com.codess.microsoft.blackgirlscode;
 import java.util.Date;
 import java.util.UUID;
 
-public class Person {
+public class Person
+{
   private Date joinDate;
   private String name;
   private Integer age;

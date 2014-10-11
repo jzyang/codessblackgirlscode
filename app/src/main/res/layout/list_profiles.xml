@@ -3,23 +3,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:background="@android:color/darker_gray"
+        android:cropToPadding="true" />
+
     <TextView
-        android:id="@+id/event_list_item_titleTextView"
+        android:id="@+id/profile_list_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:text="@string/event_title"/>
+        android:layout_toRightOf="@id/profile_icon"
+        android:text="@string/profile_name"/>
 
     <TextView
-        android:id="@+id/event_list_item_dateTextView"
+        android:id="@+id/profile_list_item_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/event_list_item_titleTextView"
+        android:layout_toRightOf="@id/profile_icon"
+        android:layout_below="@id/profile_list_item_name"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
         android:paddingTop="4dp"
-        android:text="@string/event_date"/>
+        android:text="@string/profile_status"/>
 
 </RelativeLayout>
