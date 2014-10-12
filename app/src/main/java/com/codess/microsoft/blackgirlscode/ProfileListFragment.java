@@ -40,7 +40,7 @@ public class ProfileListFragment extends ListFragment
   public void onListItemClick(ListView listView, View view, int position, long id)
   {
     Person person = ((ProfileAdapter) getListAdapter()).getItem(position);
-    Log.d(TAG, person.getName() + " was clicked");
+    Log.d(TAG, "id " + person.getId() + " with name: " + person.getName() + " was clicked");
 
     // Start EventActivity
     Intent intent = new Intent(getActivity(), ProfilePageActivity.class);
@@ -108,8 +108,7 @@ public class ProfileListFragment extends ListFragment
       statusTextView.setText("online");
       ImageView iconImageView =
           (ImageView) convertView.findViewById(R.id.profile_icon);
-
-      Log.d(TAG, "View id = " + convertView.getId());
+      iconImageView.setImageResource(R.drawable.panda);
 
       return convertView;
     }

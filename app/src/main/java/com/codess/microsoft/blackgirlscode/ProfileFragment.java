@@ -62,10 +62,12 @@ public class ProfileFragment extends Fragment
     if (mIsStudent)
     {
       mPersonIcon.setBackgroundColor(Color.GREEN);
+      mPersonName.setTextColor(Color.GREEN);
     }
     else
     {
       mPersonIcon.setBackgroundColor(Color.BLUE);
+      mPersonName.setTextColor(Color.BLUE);
     }
 
     return view;

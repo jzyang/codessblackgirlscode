@@ -1,10 +1,10 @@
 package com.codess.microsoft.blackgirlscode;
 
+
 import java.util.Date;
 import java.util.UUID;
 
-public class Person
-{
+public class Person {
   private Date joinDate;
   private String name;
   private Integer age;
@@ -19,7 +19,7 @@ public class Person
 
   public Person()
   {
-    mUUID = UUID.randomUUID();
+    this.mUUID = UUID.randomUUID();
   }
 
   public Date getJoinDate()
@@ -44,7 +44,7 @@ public class Person
 
   public Integer getAge() { return age; }
 
-  public void setAge(Integer name)
+  public void setAge(Integer age)
   {
     this.age = age;
   }

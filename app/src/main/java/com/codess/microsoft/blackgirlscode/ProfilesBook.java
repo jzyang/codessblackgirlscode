@@ -36,12 +36,12 @@ public class ProfilesBook
 
   public ArrayList<Person> getProfiles()
   {
-    return mPersons;
+    return DataGenerator.peopleList;
   }
 
   public Person getProfile(UUID id)
   {
-    return mPeopleMap.get(id);
+    return DataGenerator.people.get(id);
   }
 
   public void addProfile(Person person)
