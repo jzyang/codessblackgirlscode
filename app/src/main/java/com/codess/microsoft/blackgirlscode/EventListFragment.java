@@ -69,6 +69,15 @@ public class EventListFragment extends ListFragment
     super.onCreateOptionsMenu(menu, inflater);
   }
 
+  public static EventListFragment newInstance()
+  {
+    Bundle args = new Bundle();
+
+    EventListFragment fragment = new EventListFragment();
+    fragment.setArguments(args);
+    return fragment;
+  }
+
   private class EventAdapter extends ArrayAdapter<Event>
   {
     public EventAdapter(ArrayList<Event> events)

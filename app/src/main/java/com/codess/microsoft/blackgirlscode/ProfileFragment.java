@@ -61,7 +61,7 @@ public class ProfileFragment extends Fragment
 
     if (mIsStudent)
     {
-      mPersonIcon.setBackgroundColor(Color.YELLOW);
+      mPersonIcon.setBackgroundColor(Color.GREEN);
     }
     else
     {

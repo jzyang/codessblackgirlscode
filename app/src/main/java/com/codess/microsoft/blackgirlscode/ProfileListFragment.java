@@ -28,7 +28,7 @@ public class ProfileListFragment extends ListFragment
   public void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-    getActivity().setTitle(R.string.events_title);
+    getActivity().setTitle(R.string.profiles_title);
 
     mProfiles = ProfilesBook.get(getActivity()).getProfiles();
 
@@ -46,6 +46,15 @@ public class ProfileListFragment extends ListFragment
     Intent intent = new Intent(getActivity(), ProfilePageActivity.class);
     intent.putExtra(ProfileFragment.EXTRA_PROFILE_ID, person.getId());
     startActivity(intent);
+  }
+
+  public static ProfileListFragment newInstance()
+  {
+    Bundle args = new Bundle();
+
+    ProfileListFragment fragment = new ProfileListFragment();
+    fragment.setArguments(args);
+    return fragment;
   }
 
   public List<Person> getProfiles()
